@@ -1,0 +1,24 @@
+server:
+  address: "localhost:8080"
+  tls:
+    enabled: false
+    ca: ""           # optional CA certificate to verify server
+
+auth:
+  key: "your-secret-key"
+
+agent:
+  hostname: ""       # empty for auto-detect
+  os: ""            # empty for auto-detect
+
+heartbeat:
+  interval: 30      # heartbeat interval in seconds
+
+reconnect:
+  interval: 5       # initial reconnect interval in seconds
+  max_attempts: 0   # 0 = infinite reconnect attempts
+  max_interval: 60  # maximum reconnect interval in seconds
+
+log:
+  level: "info"     # debug/info/warn/error
+  file: ""          # empty for stdout, or path to log file
